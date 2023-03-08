@@ -1,0 +1,116 @@
+@media screen and (min-width: 460px) {
+  hero-section .hero-section__content h1 {
+    font-size: 3em;
+  }
+
+  hero-section .hero-section__content p {
+    font-size: 1em;
+  }
+
+  .card-item h3 {
+    font-size: 1.3em;
+  }
+
+  .card-item span {
+    font-size: 14px;
+  }
+
+  #main-section h2 {
+    font-size: 2em;
+  }
+
+  nav .logo-brand a {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  nav #menu-button {
+    display: none;
+  }
+
+  nav ul#drawer {
+    position: static;
+    box-shadow: none;
+    width: fit-content;
+    transform: translate(0, 0);
+    display: flex;
+    gap: 14px;
+    padding: 0;
+    opacity: 1;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .hero-section {
+    min-height: 700px;
+  }
+
+  #main-section #restaurants {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #detail .menu-container {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  #detail .menu-container ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #detail .menu-container ul li {
+    flex: 1 1 100px;
+    margin: 5px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  hero-section .hero-section__content h1 {
+    font-size: 4em;
+  }
+  hero-section .hero-section__content p {
+    font-size: 1.1em;
+  }
+
+  #main-section h2 {
+    font-size: 2.4em;
+  }
+
+  #main-section #restaurants {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #detail .main-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 20px;
+  }
+
+  #detail .review {
+    height: 450px;
+    overflow-y: auto;
+  }
+
+  .form-review input,
+  textarea {
+    width: 50%;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero-section {
+    min-width: 1000px;
+  }
+
+  #main-section .container {
+    max-width: 1300px;
+    margin: auto;
+  }
+}

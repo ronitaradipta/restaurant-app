@@ -1,0 +1,49 @@
+nav {
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav #menu-button {
+  background-color: transparent;
+  font-size: 32px;
+  padding: 8px 10px;
+}
+
+nav .logo-brand a {
+  font-size: 32px;
+  font-weight: 600;
+  color: #f5b700;
+}
+
+nav #drawer {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  background-color: var(--background);
+  box-shadow: 0 5px 8px rgba(161, 161, 161, 0.7);
+  left: -250px;
+  top: 0;
+  opacity: 0.1;
+  transition: 0.5s;
+  z-index: 10;
+  padding: 32px 24px;
+}
+
+nav #drawer.open {
+  left: 0;
+  opacity: 1;
+}
+
+/* nav ul li {
+  padding: 16px 0;
+} */
+
+nav ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 16px;
+  width: 100%;
+  display: block;
+}

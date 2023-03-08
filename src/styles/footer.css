@@ -1,0 +1,15 @@
+footer-custom {
+  text-align: center;
+}
+
+footer-custom hr {
+  width: 100%;
+  border-top: 1px solid var(--secondary);
+}
+
+footer-custom p {
+  margin-top: 20px;
+  color: var(--text);
+  padding-bottom: 20px;
+  font-size: 14px;
+}

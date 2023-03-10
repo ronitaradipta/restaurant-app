@@ -27,8 +27,8 @@ const RestaurantList = {
       spinnerContainer.style.display = 'none';
 
       restaurants.forEach((restaurant) => {
-        restaurantContainer.innerHTML
-          += createRestaurantCardTemplate(restaurant);
+        restaurantContainer.innerHTML +=
+          createRestaurantCardTemplate(restaurant);
       });
     } catch (error) {
       console.log(error);

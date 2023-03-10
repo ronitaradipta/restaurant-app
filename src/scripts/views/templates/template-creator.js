@@ -2,21 +2,23 @@ import CONFIG from '../../globals/config';
 import getRatingStar from '../../utils/get-ratings';
 
 const createRestaurantCardTemplate = (restaurant) => `
-<div class="card-item" tabindex="0">
-  <a href="#/detail/${restaurant.id}">
+<div class="card-item restaurant" tabindex="0">
+  <a href="#/detail/${restaurant.id || '-'}">
     <div class="image-container" tabindex="0">
-      <img src=${CONFIG.BASE_IMAGE_URL}/small/${restaurant.pictureId} alt="${
-  restaurant.name
-}" />
+      <img src="./images/ef3-placeholder-image-large.jpg" data-src=${
+        CONFIG.BASE_IMAGE_URL || '-'
+      }/small/${restaurant.pictureId || '-'} alt="${
+  restaurant.name || '-'
+}" class="lazyload" />
     </div>
     <div class="card-content">
-      <span aria-label="rating restoran ${restaurant.name}">
-        ${getRatingStar(restaurant.rating)} ${restaurant.rating}
+      <span aria-label="rating restoran ${restaurant.name || '-'}">
+        ${getRatingStar(restaurant.rating)} ${restaurant.rating || '-'}
       </span>
-      <span class="city">${restaurant.city}</span>
-      <h3>${restaurant.name}</h3>
+      <span class="city">${restaurant.city || '-'}</span>
+      <h3 class="restaurant__title">${restaurant.name || '-'}</h3>
       <p>
-        ${restaurant.description}
+        ${restaurant.description || '-'}
       </p>
     </div>
   </a>

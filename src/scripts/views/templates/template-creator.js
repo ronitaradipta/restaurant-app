@@ -129,6 +129,21 @@ const failedLoad = () => `
   </div>
 `;
 
+const skeletonLoading = (numberOfCards) => {
+  let skeletonCards = '';
+  for (let i = 0; i < numberOfCards; i++) {
+    skeletonCards += `<div class="card-item skeleton">
+    <div class="image-container blink-animation"></div>
+      <div class="card-content">
+        <div class="restaurant__title blink-animation"></div>
+        <div class="description blink-animation"></div>
+      </div>
+    </div>`;
+  }
+
+  return skeletonCards;
+};
+
 export {
   createRestaurantCardTemplate,
   createRestaurantDetailTemplate,
@@ -136,4 +151,5 @@ export {
   createUnlikeRestaurantButtonTemplate,
   spinnerLoading,
   failedLoad,
+  skeletonLoading,
 };

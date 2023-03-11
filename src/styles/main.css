@@ -54,6 +54,7 @@ li {
 main {
   padding: 52px 0;
   background-color: var(--background);
+  min-height: 500px;
 }
 
 #main-section h2 {
@@ -315,4 +316,37 @@ textarea {
   border-radius: 4px;
   padding: 10px;
   margin-bottom: 32px;
+}
+
+.skeleton .image-container {
+  background-color: #cccccc;
+  height: 166px;
+}
+
+.skeleton .restaurant__title,
+.skeleton .p {
+  background-color: #cccccc;
+  padding: 1em;
+  margin-bottom: 6px;
+}
+
+.skeleton .description {
+  background-color: #cccccc;
+  padding: 0.5em;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.skeleton .blink-animation {
+  animation: blink 1s ease-in-out infinite;
 }

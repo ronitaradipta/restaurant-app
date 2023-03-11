@@ -2,7 +2,7 @@ import RestaurantSource from '../../data/restaurant-source';
 import {
   createRestaurantCardTemplate,
   failedLoad,
-  spinnerLoading,
+  skeletonLoading,
 } from '../templates/template-creator';
 
 const RestaurantList = {
@@ -18,13 +18,12 @@ const RestaurantList = {
 
   async afterRender() {
     const restaurantContainer = document.querySelector('#restaurants');
-    const spinnerContainer = document.querySelector('#spinner-container');
+    restaurantContainer.innerHTML = skeletonLoading(6);
 
-    spinnerContainer.innerHTML = spinnerLoading();
     try {
       const restaurants = await RestaurantSource.restaurantList();
 
-      spinnerContainer.style.display = 'none';
+      restaurantContainer.innerHTML = '';
 
       restaurants.forEach((restaurant) => {
         restaurantContainer.innerHTML +=
@@ -32,7 +31,6 @@ const RestaurantList = {
       });
     } catch (error) {
       console.log(error);
-      spinnerContainer.style.display = 'none';
       restaurantContainer.style.display = 'block';
       restaurantContainer.style.alignItem = 'center';
       restaurantContainer.innerHTML = failedLoad();

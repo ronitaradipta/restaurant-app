@@ -82,7 +82,7 @@ const RestaurantDetails = {
         } catch (error) {
           console.log(error);
           alert(
-            'failed to add review. please try again or check your connection'
+            'failed to add review. please try again or check your connection',
           );
         }
       });

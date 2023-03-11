@@ -6,8 +6,8 @@ const createRestaurantCardTemplate = (restaurant) => `
   <a href="#/detail/${restaurant.id || '-'}">
     <div class="image-container" tabindex="0">
       <img src="./images/ef3-placeholder-image-large.jpg" data-src=${
-        CONFIG.BASE_IMAGE_URL || '-'
-      }/small/${restaurant.pictureId || '-'} alt="${
+  CONFIG.BASE_IMAGE_URL || '-'
+}/small/${restaurant.pictureId || '-'} alt="${
   restaurant.name || '-'
 }" class="lazyload" />
     </div>
@@ -40,22 +40,20 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <h4><i class="fa-solid fa-utensils"></i>Food</h4>
   <ul>
       ${restaurant.menus.foods
-        .map(
-          (food) =>
-            `<li><i class="fa-solid fa-check"></i><p>${food.name}</p></li>`
-        )
-        .join('')}
+    .map(
+      (food) => `<li><i class="fa-solid fa-check"></i><p>${food.name}</p></li>`,
+    )
+    .join('')}
   </ul>
 </div>
 <div class="menu-drink">
   <h4><i class="fa-solid fa-mug-saucer"></i>Drink</h4>
   <ul>
       ${restaurant.menus.drinks
-        .map(
-          (drink) =>
-            `<li><i class="fa-solid fa-check"></i><p>${drink.name}</p></li>`
-        )
-        .join('')}
+    .map(
+      (drink) => `<li><i class="fa-solid fa-check"></i><p>${drink.name}</p></li>`,
+    )
+    .join('')}
   </ul>
 </div>
 </div>
@@ -82,8 +80,8 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <li class="restaurant-category">
     <i class="fa-solid fa-tag"></i>
     ${restaurant.categories
-      .map((category) => `<span class="category">${category.name}</span>`)
-      .join(',')}
+    .map((category) => `<span class="category">${category.name}</span>`)
+    .join(',')}
   </li>
 </ul>
 
@@ -98,7 +96,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <div class="review-body">
       <p>${review.review}</p>
     </div>
-  </div>`
+  </div>`,
     )
     .join('')}
 </div>

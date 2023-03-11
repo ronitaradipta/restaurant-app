@@ -30,6 +30,8 @@ class App {
     await page.afterRender();
     const mainSection = document.querySelector('#main-section');
     const skipLinkElement = document.querySelector('.skip-link');
+    window.scroll(0, 0);
+    document.querySelector('.beforeSkip').focus();
     skipLinkElement.addEventListener('click', (event) => {
       event.preventDefault();
       mainSection.scrollIntoView({ behavior: 'smooth' });

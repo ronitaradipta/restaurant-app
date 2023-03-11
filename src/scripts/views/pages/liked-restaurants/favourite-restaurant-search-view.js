@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import {
   createRestaurantCardTemplate,
   spinnerLoading,
@@ -24,9 +25,8 @@ class FavouriteRestaurantSearchView {
     if (restaurants.length) {
       spinnerContainer.style.display = 'none';
       html = restaurants.reduce(
-        (carry, restaurant) =>
-          carry.concat(createRestaurantCardTemplate(restaurant)),
-        ''
+        (carry, restaurant) => carry.concat(createRestaurantCardTemplate(restaurant)),
+        '',
       );
     } else {
       spinnerContainer.style.display = 'none';

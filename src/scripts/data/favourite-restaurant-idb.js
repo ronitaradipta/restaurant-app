@@ -38,7 +38,7 @@ const FavouriteRestaurantIdb = {
       const loweredCaseRestaurantTitle = (restaurant.name || '-').toLowerCase();
       const jammedRestaurantTitle = loweredCaseRestaurantTitle.replace(
         /\s/g,
-        ''
+        '',
       );
       const loweredCaseQuery = query.toLowerCase();
       const jammedQuery = loweredCaseQuery.replace(/\s/g, '');

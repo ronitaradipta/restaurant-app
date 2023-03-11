@@ -26,8 +26,8 @@ const RestaurantList = {
       restaurantContainer.innerHTML = '';
 
       restaurants.forEach((restaurant) => {
-        restaurantContainer.innerHTML +=
-          createRestaurantCardTemplate(restaurant);
+        restaurantContainer.innerHTML
+          += createRestaurantCardTemplate(restaurant);
       });
     } catch (error) {
       console.log(error);
